@@ -1,0 +1,31 @@
+[project]
+name = "vannaai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "psycopg[binary]",
+  "pydantic>=2",
+  "python-dotenv",
+  "vanna[postgres]",
+  "langchain-core>=0.2",
+  "langchain-text-splitters>=0.2",
+  "langchain-postgres>=0.0.15",
+  "ollama>=0.5.3",
+  "langchain-huggingface>=0.3.1",
+  "sentence-transformers>=2.5,<3",
+  "torch>=2.8.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "httpx",
+    "anyio",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.18",
+    "mkdocs-mermaid2-plugin>=1.2.2",
+]
