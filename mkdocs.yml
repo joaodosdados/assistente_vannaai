@@ -1,12 +1,46 @@
-site_name: Assistente de Status de Processo — MVP
-site_description: Documentação do MVP (FastAPI + Postgres + Vanna + Ollama + pgvector)
+site_name: Assistente VANNAAI
+repo_url: https://github.com/joaodosdados/assistente_vannaai
 theme:
   name: material
-  language: pt-BR
+  features:
+    - navigation.top
+    - content.code.copy
+    - toc.integrate
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joaodosdados/assistente_vannaai
 
 nav:
   - Início: index.md
-  - Arquitetura: architecture.md
-  - Intenções: intents.md
-  - Fluxo NLQ: nlq_flow.md
+  - Setup:
+    - Ambiente: setup/index.md
+  - Arquitetura:
+    - Visão geral: arquitetura/index.md
+  - Dados:
+    - Esquema & Views: dados/esquema.md
+  - API:
+    - Referência: api/index.md
+  - Integrações:
+    - Vanna: integracoes/vanna.md
+  - Segurança:
+    - Guardrails de SQL: seguranca/guardrails.md
+    - Perfis de acesso: seguranca/perfis.md
+  - Deploy:
+    - Docker Compose: deploy/docker.md
+  - Operação:
+    - Observabilidade: operacao/observabilidade.md
   - Roadmap: roadmap.md
+  - Troubleshooting: troubleshooting.md

@@ -1,6 +1,14 @@
-# Início
+# Assistente VANNAAI
 
-Bem-vindo à documentação do **MVP do Assistente de Status de Processo** 🚀
+Esta é a documentação do MVP do Assistente VANNAAI. Objetivo: permitir consultas em linguagem natural (PT‑BR) sobre **processos** via API, com **guardrails de SQL** e **views** de leitura no Postgres.
 
-Este projeto combina **FastAPI**, **Postgres**, **pgvector**, **Vanna** e **Ollama**  
-para oferecer um assistente que responde perguntas em linguagem natural sobre processos.
+## O que tem aqui
+- **Setup por OS** (incl. Windows/WSL2)
+- **Arquitetura** com diagrama
+- **Esquema de dados** (tabelas, views e mascaramento de PII)
+- **API** com exemplos
+- **Guardrails de segurança**
+- **Deploy** com Docker Compose
+- **Observabilidade** e **Troubleshooting**
+
+> Para um tour rápido, suba a API localmente e acesse `/docs` (OpenAPI).

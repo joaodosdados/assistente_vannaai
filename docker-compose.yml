@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:14
+    container_name: vannaai_db
+    environment:
+      POSTGRES_USER: vanna
+      POSTGRES_PASSWORD: vanna
+      POSTGRES_DB: processos
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  api:
+    build: .
+    container_name: vannaai_api
+    command: uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://vanna:vanna@db:5432/processos
+    depends_on:
+      - db
+
+volumes:
+  db_data:
