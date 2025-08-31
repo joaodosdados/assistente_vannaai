@@ -4,7 +4,7 @@ from .routers import status, nlq, chat
 from .services.vanna_client import build_vanna, connect_and_seed
 
 
-app = FastAPI(title="Assistente MVP")
+app = FastAPI(title="Assistente de processos MVP")
 app.include_router(status.router)
 app.include_router(nlq.router)
 app.include_router(chat.router)
