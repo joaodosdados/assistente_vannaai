@@ -49,3 +49,5 @@ curl -X POST http://localhost:8000/status/consultar \
 ## 📚 Documentação completa
 Guia de instalação, arquitetura, segurança e integrações:  
 👉 [Docs (MkDocs)](https://joaodosdados.github.io/assistente_vannaai) *(ou rode `mkdocs serve` localmente)*
+
+
